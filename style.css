@@ -1,0 +1,575 @@
+/* rest page */
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+/* nav mobile */
+.nav-mobile{
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 46.5px;
+  background-color: #000;
+}
+.nav-mobile__list {
+  display: flex;
+  list-style-type: none;
+}
+.nav-mobile__link {
+  display: inline-block;
+  padding: 14px 24px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+}
+.nav-mobile__item:hover .nav-mobile__link {
+  color: #000;
+  background-color: #ccc;
+}
+
+.meun__list{
+  background-color: #000000;
+  margin-top: 40px;
+  display: none;
+}
+
+.meun__list{
+  list-style: none;
+}
+.meun__list-item{
+  padding: 10px;
+  cursor: pointer;
+}
+.menu__list-link{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+.meun__list-item:hover{
+  background-color: gray;
+  color: black;
+}
+.nav-mobile__menu-btn{
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+}
+.nav-mobile__btn {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  height: 100%;
+  padding: 0 24px;
+  cursor: pointer;
+}
+.nav-mobile__btn:hover {
+  background-color: rgb(199, 199, 199);
+  color: black;
+}
+.nav-mobile__btn:active .meun__list{
+  display:block;
+}
+/* end of nav mobile */
+
+/* navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 46.5px;
+  background-color: #000;
+}
+
+.navbar__list {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar__link {
+  display: inline-block;
+  padding: 14px 24px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+}
+
+.navbar__item:hover .navbar__link {
+  color: #000;
+  background-color: #ccc;
+}
+
+.navbar__item:nth-child(5):hover .navbar__menu {
+  display: block;
+}
+
+.navbar__menu {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  width: 160px;
+  background-color: white;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar__menu-link {
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  padding: 8px 16px;
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar__menu-link:hover {
+  background-color: #ccc;
+}
+
+.navbar__search {
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+}
+
+.navbar__search:hover .navbar__search-btn {
+  background-color: red;
+}
+
+.navbar__search-btn {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  height: 100%;
+  padding: 0 24px;
+  cursor: pointer;
+}
+/* end of navBar */
+
+/* header */
+header{
+  height:700px;
+  background-image: url(./images/3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation-name: move;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.header__title{
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.header__paragraph{
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.header__title::after {
+  content: "Los Angeles";
+  animation: title 6s infinite steps(1);
+}
+.header__paragraph::after {
+  content: "We had the best time playing at Venice Beach!";
+  animation: paragraph 6s infinite steps(1);
+}
+
+@keyframes move{
+  0%{
+      background-image: url(./images/3.jpg);
+  }
+
+  40%{
+    background-image: url(./images/1.jpg);
+  }
+  60%{
+    background-image: url(./images/2.jpg);
+  }
+  100%{
+    background-image: url(./images/3.jpg);
+  }
+}
+
+@keyframes title {
+  0% {
+    content: "Los Angeles";
+  }
+
+  33.33% {
+    content: "New York";
+  }
+
+  66.66% {
+    content: "Chicago";
+  }
+}
+@keyframes paragraph {
+  0% {
+    content: "We had the best time playing at Venice Beach!";
+  }
+
+  33.33% {
+    content: "The atmosphere in New York is lorem ipsum.";
+  }
+
+  66.66% {
+    content: "Thank you, Chicago - A night we won't forget.";
+  }
+}
+/* end of header */
+
+/* section_1 */
+.section-1{
+  max-width: 800px;
+  margin: auto;
+  padding: 50px 10px 50px 10px;
+}
+.section-1__title{
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: lighter;
+  letter-spacing: 3px;
+  margin:10px 0px 10px 0px;
+  text-align: center;
+}
+.section-1__subtitle{
+  color: gray;
+  font-style: italic;
+  letter-spacing:2px;
+  margin: 10px 0px 10px 0px;
+  text-align: center;
+}
+.section-1__paragraph{
+  margin: 20px 0px 20px 0px;
+  line-height:23px;
+}
+.sectiton-1__img{
+  display: flex;
+  padding: 10px;
+}
+.sectiton-1__img div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sectiton-1__img p{
+  padding: 10px;
+}
+.sectiton-1__img img{
+  width: 60%;
+}
+/* end of section_1 */
+
+/* section_2 */
+#section2{
+  background-color: black;
+  width: 100%;
+}
+.section-2{
+  max-width: 800px;
+  margin: auto;
+  padding: 50px 10px 50px 10px;
+}
+.section-2__title{
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: lighter;
+  letter-spacing: 3px;
+  color: white;
+  text-align: center;
+  margin:10px 0px 10px 0px;
+}
+.section-2__paragraph{
+  color: gray;
+  font-style: italic;
+  text-align: center;
+  margin:30px 0px 50px 0px;
+}
+.list{
+  background-color: white;
+  list-style: none;
+}
+.list__item{
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  color: rgb(87, 87, 87);
+  display: flex;
+}
+.list__span{
+  background-color: red;
+  color: white;
+  padding: 4px;
+  margin-left: 10px;
+}
+.list__last-span{
+  background-color: black;
+  border-radius: 50%;
+  padding: 3px 10px;
+  color: white;
+  font-size: 18px;
+  margin-left: auto;
+}
+.iamges{
+  display: flex;
+  gap: 15px;
+  padding: 20px 0px 50px 0px;
+}
+.images__div{
+  background-color: white;
+}
+.info{
+  padding: 10px 25px;
+}
+.images__div img{
+  width: 100%;
+}
+.images__div img:hover{
+  opacity: 0.4;
+}
+.images__btn{
+  background-color: black;
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.images__btn:hover{
+  background-color: rgb(171, 168, 168);
+  color: rgb(0, 0, 0);
+}
+.info p:first-of-type{
+  font-size: 18px;
+  font-weight:bolder;
+}
+.info p{
+  margin-bottom: 7px;
+}
+/* section_2 */
+
+/* section_3 */
+.section-3__title{
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: lighter;
+  letter-spacing: 3px;
+  text-align: center;
+  margin:20px 0px 10px 0px;
+}
+.section-3__paragraph{
+  color: gray;
+  font-style: italic;
+  text-align: center;
+  margin:30px 0px 30px 0px;
+}
+.get-touch{
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+}
+.get-touch__paragraphs p{
+  padding: 8px;
+}
+.get-touch__paragraphs p i{
+  margin-right: 10px;
+}
+input{
+  padding: 8px;
+}
+.form-inputs{
+  display: flex;
+  gap: 10px;
+  padding: 10px 0px 10px 0px;
+}
+.form-inputs__input{
+  padding: 1;
+}
+.input-message{
+  width: 100%;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+.form__btn{
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 15px;
+  align-self: end;
+  margin-top: 10px;
+}
+.form__btn:hover{
+  background-color: lightgray;
+  color: black;
+}
+.map{
+  margin-top:30px;
+  background-color: rgba(0, 0, 0,0.4);
+}
+.map__img{
+  position: relative;
+  z-index: -1;
+  width: 100%;
+}
+/* end of section_3 */
+/* footer */
+footer{
+  display: grid;
+  place-items: center;
+  padding: 60px 10px 50px 10px;
+}
+.footer__social i{
+  color: gray;
+  font-size: 20px;
+  padding: 3px;
+}
+.footer__social i:hover{
+  color: rgb(167, 166, 166);
+  cursor: pointer;
+}
+.footer__p{
+  color: gray;
+  padding: 10px;
+}
+.footer__anchor-tag{
+  color: gray;
+}
+/* end of footer */
+
+/* MEDIA QUERY */
+/* Mobile : 375px => 768px */
+@media screen and (min-width:375px) and (max-width:767px) {
+  .navbar{
+    display: none;
+  }
+  .nav-mobile{
+    display: block;
+  }
+  header{
+    height:250px;
+  }
+  .header__title{
+    padding: 10px;
+  }
+  .header__paragraph{
+    padding: 10px;
+  }
+  .sectiton-1__img{
+    flex-direction: column;
+  }
+  .sectiton-1__img img{
+    width: 70%;
+  }
+  .iamges{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0px 50px 0px;
+  }
+  .get-touch{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .form-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .form-inputs__input{
+    padding: 1;
+    width: 100%;
+  }
+  .input-message{
+    width: 100%;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+  .form__btn{
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 15px;
+    align-self: end;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width:100px) and (max-width:375px) {
+  .navbar{
+    display: none;
+  }
+  .nav-mobile{
+    display: block;
+  }
+  header{
+    height:250px;
+  }
+  .header__title{
+    padding: 10px;
+  }
+  .header__paragraph{
+    padding: 10px;
+  }
+  .sectiton-1__img{
+    flex-direction: column;
+  }
+  .sectiton-1__img img{
+    width: 70%;
+  }
+  .iamges{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0px 50px 0px;
+  }
+  .get-touch{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .form-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .form-inputs__input{
+    padding: 1;
+    width: 100%;
+  }
+  .input-message{
+    width: 100%;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+  .form__btn{
+    margin-right: 10px;
+  }
+}
